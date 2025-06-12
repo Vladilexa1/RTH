@@ -36,7 +36,7 @@ export default function Discard(props) {
                   <option>31</option>
                   <option>32</option>
                 </select>
-                <label>AUX</label>
+                <label class="AUX-lable">AUX</label>
               </div>
           </div>
     );

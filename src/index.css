@@ -162,7 +162,9 @@ p{
 .input-number-right{
   text-align: right;
 }
-
+.AUX-lable{
+  margin-left: 3px;
+}
 
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
