@@ -3,7 +3,7 @@ export default function Discard(props) {
         <div class="discard-box">
             <div class="form-check form-switch discard-check">
               <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
-              <label class="form-check-label" for="flexSwitchCheckDefault">Discard</label>
+              <label>Discard</label>
             </div>
               <div class="AUX">
                 <select>
