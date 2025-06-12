@@ -132,3 +132,7 @@ input[type=range][orient=vertical] {
 .AUX{
   margin-right: 10px;
 }
+.hower-block{
+  border: solid;
+  background-color: aliceblue;
+}
