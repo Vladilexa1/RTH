@@ -136,3 +136,20 @@ input[type=range][orient=vertical] {
   border: solid;
   background-color: aliceblue;
 }
+.voltage{
+
+  border: solid;
+  background-color: aliceblue;
+
+}
+.number-voltage{
+  width: 70px;
+  margin-left: 3px;
+  margin-top: 3px;
+  margin-right: 3px; 
+}
+.voltage-p{
+  text-align: center;
+  margin: none!important;
+  padding: none!important;
+}

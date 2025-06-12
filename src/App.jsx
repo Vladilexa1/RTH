@@ -4,6 +4,7 @@ import HowerBlock from "./components/howerBlock";
 import Map from "./components/map";
 import Navbar from "./components/navbar";
 import SafeRadius from "./components/safeRadius";
+import Voltage from "./components/voltage";
 
 
 function App() {
@@ -14,8 +15,10 @@ function App() {
           <AltitudeBlock></AltitudeBlock>
           <div>
             <SafeRadius></SafeRadius>
+            <Voltage></Voltage>
             <HowerBlock></HowerBlock>
             <Discard></Discard>
+            
           </div>
           <Map></Map>
           
