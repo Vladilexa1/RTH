@@ -1,0 +1,9 @@
+export default function Altitude(props) {
+    return (
+        <div class="altitude">
+            <input type="range" min="0" max="100" step="1" value="50" orient="vertical"/>  
+            <input type="number" class="number-altitude"></input>
+            <p class="title-alitude">{props.title}</p>
+        </div>
+    );
+}
