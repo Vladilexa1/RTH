@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -23,6 +22,12 @@ code {
 .bg-blue{
   background-color: #0f53a6;
 }
+.bgcol{
+  background-color: aliceblue;
+}
+.bord{
+  border: solid;
+}
 input[type=range][orient=vertical] {
   writing-mode: vertical-lr;
   direction: rtl;
@@ -37,37 +42,42 @@ input[type=range][orient=vertical] {
   width: 80px;
   flex-direction: column;
   align-items: center;
-  background-color: aliceblue;
 }
 .altitude-block{
   display: flex;
-  border: solid;
-  border-color: black;
   height: 300px;
 }
 .title-alitude{
   text-align: center;
 }
-.number-altitude{
+.number-width{
   width: 70px;
+}
+.number-altitude{
   margin: 5px;
   text-align: center;
 }
+.safe-radius-number{
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.number-voltage{
+  margin-left: 3px;
+  margin-top: 3px;
+  margin-right: 3px; 
+}
+.delay-number{
+  margin: 3px;
+}
+.input-number-right{
+  text-align: right;
+}
 .safe-radius{
-  background-color: aliceblue;
-  height: 70px;
-  border: solid;
-  border-color: black;
   padding: 3px;
 }
 .safe-radius-range{
   width: 200px;
   margin: 5px;
-}
-.safe-radius-number{
-  width: 70px;
-  margin-top: 5px;
-  margin-left: 5px;
 }
 .title-safe-radius{
   text-align: center;
@@ -121,8 +131,6 @@ input[type=range][orient=vertical] {
 }
 .discard-box{
   display: flex;
-  border: solid;
-  background-color: aliceblue;
   align-items: center;
   justify-content: space-between;
 }
@@ -136,36 +144,12 @@ input[type=range][orient=vertical] {
   border: solid;
   background-color: aliceblue;
 }
-.voltage{
-
-  border: solid;
-  background-color: aliceblue;
-
-}
-.number-voltage{
-  width: 70px;
-  margin-left: 3px;
-  margin-top: 3px;
-  margin-right: 3px; 
-}
 p{
   text-align: center;
-}
-.delay{
-  background-color: aliceblue;
-  border: solid;
-}
-.delay-number{
-  width: 70px;
-  margin: 3px;
-}
-.input-number-right{
-  text-align: right;
 }
 .AUX-lable{
   margin-left: 3px;
 }
-
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;

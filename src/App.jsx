@@ -1,4 +1,4 @@
-import AltitudeBlock from "./components/altitude_block";
+import AltitudeBlock from "./components/altitudeBlock";
 import Delay from "./components/delay";
 import Discard from "./components/discard";
 import HowerBlock from "./components/howerBlock";
@@ -21,8 +21,8 @@ function App() {
             <Discard></Discard>
           </div>
           <Map></Map>
-          
         </div>
+        <Navbar/>
       </div>
   );
 }

@@ -1,6 +1,6 @@
 export default function Discard(props) {
     return (
-        <div class="discard-box">
+        <div class="discard-box bgcol bord">
             <div class="form-check form-switch discard-check">
               <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
               <label>Discard</label>
