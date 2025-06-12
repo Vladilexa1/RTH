@@ -148,8 +148,27 @@ input[type=range][orient=vertical] {
   margin-top: 3px;
   margin-right: 3px; 
 }
-.voltage-p{
+p{
   text-align: center;
-  margin: none!important;
-  padding: none!important;
+}
+.delay{
+  background-color: aliceblue;
+  border: solid;
+}
+.delay-number{
+  width: 70px;
+  margin: 3px;
+}
+.input-number-right{
+  text-align: right;
+}
+
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
 }

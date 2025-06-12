@@ -1,4 +1,5 @@
 import AltitudeBlock from "./components/altitude_block";
+import Delay from "./components/delay";
 import Discard from "./components/discard";
 import HowerBlock from "./components/howerBlock";
 import Map from "./components/map";
@@ -14,11 +15,10 @@ function App() {
         <div class="container">
           <AltitudeBlock></AltitudeBlock>
           <div>
-            <SafeRadius></SafeRadius>
             <Voltage></Voltage>
+            <Delay></Delay>
             <HowerBlock></HowerBlock>
             <Discard></Discard>
-            
           </div>
           <Map></Map>
           
