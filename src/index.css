@@ -119,3 +119,16 @@ input[type=range][orient=vertical] {
   display: flex;
   align-items: center;
 }
+.discard-box{
+  display: flex;
+  border: solid;
+  background-color: aliceblue;
+  align-items: center;
+  justify-content: space-between;
+}
+.discard-check{
+  margin-left: 10px;
+}
+.AUX{
+  margin-right: 10px;
+}
