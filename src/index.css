@@ -11,3 +11,111 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container{
+  display: flex;
+}
+.container-fluid{
+  justify-content: center!important;
+}
+.navbar-text{
+    color: honeydew;
+}
+.bg-blue{
+  background-color: #0f53a6;
+}
+input[type=range][orient=vertical] {
+  writing-mode: vertical-lr;
+  direction: rtl;
+  appearance: slider-vertical;
+  width: 16px;
+  vertical-align: bottom;
+  height: 200px;
+  margin-top: 10px;
+}
+.altitude{
+  display: flex;
+  width: 80px;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+}
+.altitude-block{
+  display: flex;
+  border: solid;
+  border-color: black;
+  height: 300px;
+}
+.title-alitude{
+  text-align: center;
+}
+.number-altitude{
+  width: 70px;
+  margin: 5px;
+  text-align: center;
+}
+.safe-radius{
+  background-color: aliceblue;
+  height: 70px;
+  border: solid;
+  border-color: black;
+  padding: 3px;
+}
+.safe-radius-range{
+  width: 200px;
+  margin: 5px;
+}
+.safe-radius-number{
+  width: 70px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.title-safe-radius{
+  text-align: center;
+  margin: 3px;
+}
+.home-img{
+  width: 40px;
+  height: 40px;
+}
+.drone-img{
+  width: 25px;
+  height: 25px;
+}
+.arrow-img{
+  width: 100px;
+  height: 25px;
+}
+.square{
+  width: 400px;
+  height: 400px;
+  background-color: rgb(203, 216, 127);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid;
+  border-bottom: none;
+}
+.line {
+  --color: #000;
+  --size: 12px;
+  position: relative;
+  width: 60px;
+  height: 2px;
+  background: var(--color);
+  transition: 0.2s ease;
+}
+.bullet {
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-right: 1px solid var(--color);
+  border-top: 1px solid var(--color);
+  transform: translateY(-50%) rotate(45deg);
+}
+.image{
+  display: flex;
+  align-items: center;
+}
