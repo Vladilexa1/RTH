@@ -15,12 +15,19 @@ export default function Altitude(props) {
         />
         <div>
           <input
-            type="number"
             class="number-altitude number-width"
+            type="number"
             value={props.value}
-            min={props.min}
-            max={props.max}
-            onInput={(e) => props.setValue(+e.target.value)}
+            onInput={(e) => {
+              let cleaned = e.target.value.replace(/\D/g, "");
+              cleaned = cleaned.replace(/^0+(?!$)/, "")
+              props.setValue(cleaned ? +cleaned : props.min);
+            }}
+            onBlur={() => {
+              let num = props.value;
+              if (num < props.min) props.setValue(props.min);
+              if (num > props.max) props.setValue(props.max);
+            }}
           />
           <label>m</label>
         </div>
