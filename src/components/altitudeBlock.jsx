@@ -2,8 +2,8 @@ import { createSignal } from "solid-js";
 import Altitude from "./altitude";
 
 export default function AltitudeBlock() {
-  const [minValue, setMinValue] = createSignal();
-  const [maxValue, setMaxValue] = createSignal();
+  const [minValue, setMinValue] = createSignal(0);
+  const [maxValue, setMaxValue] = createSignal(0);
 
   return (
     <div class="altitude-block bgcol bord">
@@ -19,7 +19,7 @@ export default function AltitudeBlock() {
         value={maxValue()}
         setValue={setMaxValue}
         min={minValue()} // ограничиваем снизу
-        max={100}
+        max={1000}
       />
     </div>
   );
