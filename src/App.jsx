@@ -4,6 +4,7 @@ import Discard from "./components/discard";
 import HowerBlock from "./components/howerBlock";
 import Map from "./components/map";
 import Navbar from "./components/navbar";
+import SafeRadius from "./components/safeRadius";
 import Voltage from "./components/voltage";
 
 
@@ -22,11 +23,14 @@ function App() {
                 <Delay></Delay>
                 <HowerBlock></HowerBlock>
                 <Discard></Discard>
+                
               </div>
-            </div>   
+            </div>
+            <SafeRadius></SafeRadius>   
           </div>
           <div class="col-md-6 map-block">
             <Map/>
+            
           </div>
         </div>
       </div>
