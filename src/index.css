@@ -57,10 +57,14 @@ input[type=range][orient=vertical] {
   text-align: center;
 }
 .number-width{
-  width: 70px;
+  width: 50px;
+}
+.number-big-width{
+  width: 80px;
 }
 .number-altitude{
-  margin: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
   text-align: center;
 }
 .safe-radius-number{
@@ -79,6 +83,9 @@ input[type=range][orient=vertical] {
   text-align: right;
 }
 .safe-radius{
+  width: 400px;
+  height: 81px;
+  border-top: none;
   padding: 3px;
 }
 .safe-radius-range{
@@ -90,8 +97,8 @@ input[type=range][orient=vertical] {
   margin: 3px;
 }
 .home-img{
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
 }
 .drone-img{
   width: 25px;

@@ -1,21 +1,122 @@
+import { createSignal } from "solid-js";
 import SafeRadius from "./safeRadius";
 
+export default function RTHMap() {
+  const [target, setTarget] = createSignal(null);
 
-export default function Map(props) {
-    return (
-        <div>
-            <div class="square">
-            <span>R = 123 m</span>
-                <div class="image">
-                  <img class="home-img" src="./src/assets/house.svg"/>
-                  
-                  <div class="line" style={{width: "123px"}}>
-                    <div class="bullet"></div>
-                  </div>
-                  <img class="drone-img" src="./src/assets/drone.svg"/>
-                </div>
-            </div>
-            <SafeRadius/>
-        </div>
-    );
+  const handleClick = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setTarget({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
+  const home = { x: 125, y: 175 };
+  const drone = { x: 225, y: 176 };
+
+  return (
+    <div
+      onClick={handleClick}
+      style={{
+        position: "relative",
+        width: "400px",
+        height: "400px",
+        background: 'rgb(203, 216, 127)',
+        border: "solid"
+      }}
+    >
+      {/* Дом */}
+      <div style={{
+        position: "absolute",
+        left: `${home.x}px`,
+        top: `${home.y}px`
+      }}>
+        <img class="home-img" src="./src/assets/house.svg" />
+      </div>
+
+      {/* Дрон */}
+      <div style={{
+        position: "absolute",
+        left: `${drone.x}px`,
+        top: `${drone.y}px`
+      }}>
+        <img class="drone-img" src="./src/assets/drone.svg" />
+      </div>
+      {/* SVG стрелки */}
+      <svg
+        width="400"
+        height="400"
+        style={{ position: "absolute", top: 0, left: 0 }}
+      >
+        {/* Чёрная стрелка от дома к дрону */}
+        <line
+    x1={home.x + 25}  // сдвиг на половину ширины иконки
+    y1={home.y + 16}
+    x2={drone.x - 10}
+    y2={drone.y + 15}
+    stroke="black"
+    marker-end="url(#arrow)"
+  />
+  <text
+    x={(home.x + drone.x) / 2 + 16}
+    y={(home.y + drone.y) / 2 + 8} // чуть ниже, чтобы не перекрывалось
+    font-size="14"
+    fill="black"
+    text-anchor="middle"
+  >
+    R = {Math.round(Math.hypot(drone.x - home.x, drone.y - home.y))}m
+  </text>
+
+        {/* Стрелки к точке, если она выбрана */}
+        {target() && (
+          <>
+            <line
+              x1={home.x + 13}
+              y1={home.y + 13}
+              x2={target().x}
+              y2={target().y}
+              stroke="black"
+            />
+            <line
+              x1={drone.x + 13}
+              y1={drone.y + 13}
+              x2={target().x}
+              y2={target().y}
+              stroke="black"
+            />
+            <text
+              x={(home.x + target().x) / 2}
+              y={(home.y + target().y) / 2 - 10}
+              font-size="14"
+              fill="black"
+              text-anchor="middle"
+            >
+              l = {Math.round(Math.hypot(target().x - home.x -13, target().y - home.y - 13))} m
+            </text>
+          </>
+        )}
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10"
+            refX="5" refY="5" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="black" />
+          </marker>
+        </defs>
+      </svg>
+
+      {/* Точка назначения */}
+      {target() && (
+        <div class="point" style={{
+          position: "absolute",
+          left: `${target().x}px`,
+          top: `${target().y}px`,
+          width: "6px",
+          height: "6px",
+          background: "red",
+          "border-radius": "50%",
+          transform: "translate(-50%, -50%)"
+        }}></div>
+      )}
+    </div>
+  );
 }
