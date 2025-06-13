@@ -11,19 +11,13 @@ export default function RTHMap(props) {
   return (
     <>
       <div
+        class="square"
         onClick={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setTarget({
             x: e.clientX - rect.left,
             y: e.clientY - rect.top,
           });
-        }}
-        style={{
-          position: "relative",
-          width: "400px",
-          height: "400px",
-          background: "rgb(203, 216, 127)",
-          border: "solid",
         }}
       >
         {/* Дом */}
@@ -52,7 +46,7 @@ export default function RTHMap(props) {
             fill="black"
             text-anchor="middle"
           >
-            R = {props.safeRadius}m {/* ← Вот сюда вставили */}
+            R = {props.safeRadius}m
           </text>
 
           {target() && (
@@ -93,14 +87,8 @@ export default function RTHMap(props) {
           <div
             class="point"
             style={{
-              position: "absolute",
               left: `${target().x}px`,
               top: `${target().y}px`,
-              width: "6px",
-              height: "6px",
-              background: "red",
-              "border-radius": "50%",
-              transform: "translate(-50%, -50%)",
             }}
           ></div>
         )}
