@@ -28,7 +28,7 @@ function App() {
             </div>
             <SafeRadius></SafeRadius>   
           </div>
-          <div class="col-md-6 map-block">
+          <div class="col-12 col-xl-5 col-xxl-4 map-block">
             <Map/>
             
           </div>
