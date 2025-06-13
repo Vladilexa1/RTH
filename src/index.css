@@ -200,6 +200,10 @@ p{
 .map-block{
   display: flex;
 }
+.footer{
+  display: flex;
+  
+}
 @media (max-width: 820px) {
   .left-block,
   .square-block {

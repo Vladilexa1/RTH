@@ -1,3 +1,4 @@
+import { createSignal } from "solid-js";
 import AltitudeBlock from "./components/altitudeBlock";
 import Delay from "./components/delay";
 import Discard from "./components/discard";
@@ -6,9 +7,11 @@ import Map from "./components/map";
 import Navbar from "./components/navbar";
 import SafeRadius from "./components/safeRadius";
 import Voltage from "./components/voltage";
+import Footer from "./components/footer";
 
 
 function App() {
+  const [safeRadius, setSafeRadius] = createSignal(0);
   return (
       <div>
         <Navbar/>
@@ -23,16 +26,15 @@ function App() {
                 <Delay></Delay>
                 <HowerBlock></HowerBlock>
                 <Discard></Discard>
-                
               </div>
             </div>
-            <SafeRadius></SafeRadius>   
+            <SafeRadius value={safeRadius()} onChange={setSafeRadius}></SafeRadius>   
           </div>
           <div class="col-12 col-xl-5 col-xxl-4 map-block">
-            <Map/>
-            
+            <Map safeRadius={safeRadius()}/>
           </div>
         </div>
+        <Footer></Footer>
       </div>
   );
 }
